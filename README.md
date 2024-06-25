@@ -3,8 +3,6 @@
 ## 프로젝트 개발 기간
 2024.06.01 ~ 2024.06.15
 
-[프로젝트 노트북 보기](wine_quality.ipynb)  
-[PDF 파일 보기](와인_품질_분류.pdf)
 
 ## 프로젝트 설계
 Red Wine Quality Dataset을 분석하여 dataset 내에 quality를 예측하는 분류 프로젝트입니다.
@@ -19,9 +17,13 @@ Red Wine Quality Dataset을 분석하여 dataset 내에 quality를 예측하는 
 
 ### 전처리 작업
 - 결측치 확인 결과 결측치가 한 개도 없음을 확인.
+  
 ![결측치 확인](https://github.com/jungoat/Wine_quality/blob/master/readme_images/Untitled1.png)
+
 - 이상치 제거: 데이터프레임에서 1사분위수와 3사분위수를 계산하고 이를 통해 IQR을 계산함. 각 열의 값이 1사분위수에서 1.5*IQR만큼 아래에 있거나, 3사분위수에서 1.5*IQR만큼 위에 있는 경우를 이상치로 간주하고 제거함.
+  
 ![이상치 제거](https://github.com/jungoat/Wine_quality/blob/master/readme_images/Untitled2.png)
+
 - 데이터 정규화: MinMaxScaler, RobustScale, StandardScaler, Normalizer 방법 중 RobustScale, StandardScaler 정규화 방법이 가장 모델의 정확도가 높아 둘 중 결과적으로 높게 나오는 것을 사용하기로 함.
 
 ## 탐색적 데이터 분석 (EDA)
